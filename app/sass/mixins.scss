@@ -1,0 +1,62 @@
+@mixin font($weight, $size, $line-height, $font-family, $color){
+	font-weight: $weight;
+	font-size: $size;
+    line-height: $line-height;
+    font-family: $font-family;
+    color: $color;
+    
+    
+}
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0){
+	padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin screen($size) {
+  $desktop: "(min-width: 1024px)";
+  $tablet: "(min-width: 768px) and (max-width: 1023px)";
+  $mobile: "(max-width: 767px)";
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  }
+  @else if $size == tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  }
+  @else if $size == mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin border-bottom{
+    border-style: solid;
+    -moz-border-image: url(../images/border.png) repeat;
+    -webkit-border-image: url(../images/border.png) repeat;
+    -o-border-image: url(../images/border.png) repeat;
+    border-image: url(../images/border.png) repeat;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: -5px;
+}
+
+
+

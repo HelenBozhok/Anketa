@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Anketa</title>
+    <style>
+        @font-face {
+            font-family: "Courier New";
+            src: url(fonts/cour.ttf);
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tcal.css">
+    <!--endbuild-->
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <img src="img/logo.png" width="150" height="50" alt="CSSSR">
+            </div>
+            <div class="header__stamp">
+                <img src="img/secret.png" alt="Секретно">
+            </div>
+        </header>
+        <section class="main">
+            <div class="container-inner">
+                <div class="title">
+                    <img src="img/case.png" alt="Дело">
+                </div>
+                <!--Обо мне-->
+                <div class="about">
+                    <ul class="about__list">
+                        <li class="about__item">
+                            <label for="name" class="about__item-label">Полное ФИО</label>
+                            <input type="text" id="name" class="about__item-input" value="Божок Елена Сергеевна" placeholder="Иванов Иван Иванович">
+                        </li>
+                        <li class="about__item">
+                            <label for="birthday" class="about__item-label">Год рождения</label>
+                            <input type="number" min="1960" max="1999" id="birthday" class="about__item-input" value="1989" placeholder="1990">
+                        </li>
+                        <li class="about__item">
+                            <label for="address" class="about__item-label">Место жительства</label>
+                            <input type="text" id="address" class="about__item-input" value="г. Владивосток, Россия" placeholder="г. Иваново, Россия">
+                        </li>
+                        <li class="about__item">
+                            <label for="skype" class="about__item-label">Скайп</label>
+                            <input type="text" id="skype" class="about__item-input" value="Елена Божок" placeholder="ivanov">
+                        </li>
+                        <li class="about__item">
+                            <label for="mail" class="about__item-label">Почта</label>
+                            <input type="email" multiple="multiple" id="mail" class="about__item-input" value="helenbozhok@yahoo.com" placeholder="ivanov@gmail.com">
+                        </li>
+                    </ul>
+                </div>
+                <!--Навыки-->
+                <div class="skills">
+                    <h1>Расскажите о себе чекбоксами</h1>
+                    <p>Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <input type="checkbox" id="bem" class="skills__item-input">
+                            <label for="bem" class="skills__item-label">БЭМ/OOCSS</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="pug" class="skills__item-input">
+                            <label for="pug" class="skills__item-label">Pug (Jade)</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="sass" class="skills__item-input" checked>
+                            <label for="sass" class="skills__item-label">Stylus/LESS/SASS</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="svg" class="skills__item-input">
+                            <label for="svg" class="skills__item-label">Работаю с SVG</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="semantic" class="skills__item-input">
+                            <label for="semantic" class="skills__item-label">Верстаю семантично</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="a11y" class="skills__item-input">
+                            <label for="a11y" class="skills__item-label">Accessibility (A11Y)</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="es" class="skills__item-input">
+                            <label for="es" class="skills__item-label">ES2015/ES2016</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="gulp" class="skills__item-input" checked>
+                            <label for="gulp" class="skills__item-label">Gulp/GRUNT</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="webpack" class="skills__item-input">
+                            <label for="webpack" class="skills__item-label">Webpack</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="webgl" class="skills__item-input">
+                            <label for="webgl" class="skills__item-label">Дружу с WebGL</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="jquery" class="skills__item-input">
+                            <label for="jquery" class="skills__item-label">jQuery</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="angular" class="skills__item-input">
+                            <label for="angular" class="skills__item-label">Знаю/изучаю Angular</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="react" class="skills__item-input">
+                            <label for="react" class="skills__item-label">Знаю/изучаю React</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="node" class="skills__item-input" checked>
+                            <label for="node" class="skills__item-label">Знаю/изучаю Node.js</label>
+                        </li>
+                        <li class="skills_item">
+                            <input type="checkbox" id="git" class="skills__item-input" checked>
+                            <label for="git" class="skills__itn-label">Использую Git</label>
+                        </li>
+                        <li class="skills_item">
+                            <input type="checkbox" id="eye" class="skills__item-input">
+                            <label for="eye" class="skills__item-label">С глазомером всё ок</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="blog" class="skills__item-input">
+                            <label for="blog" class="skills__item-label">Читаю <a href="http://blog.csssr.ru" target="_blank">blog.csssr.ru</a></label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="lazy" class="skills__item-input">
+                            <label for="lazy" class="skills__item-label">Я ленивый(-ая)</label>
+                        </li>
+                        <li class="skills__item">
+                            <input type="checkbox" id="english" class="skills__item-input">
+                            <label for="english" class="skills__item-label">У меня хороший английский</label>
+                        </li>
+                    </ul>
+                </div>
+                <!--Навык JS-->
+                <div class="js-skill">
+                    <h1>Уровень владения JavaScript</h1>
+                    <div class="slider" id="slider">
+                        <div class="slider-triangle"></div>
+                        <div class="slider__item">Не владею</div>
+                        <div class="slider__item">Использую готовые решения</div>
+                        <div class="slider__item">Использую готовые решения и умею их переделывать</div>
+                        <div class="slider__item">Пишу сложный JS с нуля</div>
+
+                    </div>
+                </div>
+                <!--Эссе-->
+                <div class="essay">
+                    <h1>Расскажите о себе словами</h1>
+                    <p>Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
+                    <div class="info">
+                        <textarea name="info" cols="30" rows="3" wrap="hard" onkeydown="textAreaHeight(this)">Специальность для меня новая, значит, необходимо много учить, а также она предполагает постоянную прокачку своих навыков, что тоже огромный плюс, т.к. все время нужно "быть на уровне", значит, будет нескучно. А еще очень понравились строки про дружный коллектив, уютный офис, одну волну и много позитива.:)</textarea>
+                    </div>
+                </div>
+                <!--Планы-->
+                <div class="plans">
+                    <h1>Какие у вас планы на будущее?</h1>
+                    <p>Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.</p>
+                    <ul class="plans__list">
+                        <li class="plans__item">
+                            <input type="radio" id="slicing" name="plans" class="plans__item-input" checked>
+                            <label for="slicing" class="plans__item-label"><span></span>Верстать</label>
+                        </li>
+                        <li class="plans__item">
+                            <input type="radio" id="js" name="plans" class="plans__item-input">
+                            <label for="js" class="plans__item-label">Прокачиваться в JS</label>
+                        </li>
+                        <li class="plans__item">
+                            <input type="radio" id="management" name="plans" class="plans__item-input">
+                            <label for="management" class="plans__input-label">Менеджерство</label>
+                        </li>
+                        <li class="plans__item">
+                            <input type="radio" id="other" name="plans" class="plans__item-input">
+                            <label for="other" class="plans__item-label">Другое</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container-inner">
+                <div class="date">
+                    <label for="date" class="date__label">Дата заполнения</label>
+                    <input type="text" id="date" name="date" class="tcal" value="2017-05-25" placeholder="2016-01-01">
+                </div>
+            </div>
+        </footer>
+    </div> 
+    <!-- build:js js/all.min.js --> 
+    <script src="js/sl.js"></script>
+    <script src="js/textarea.js"></script>
+    <script src="js/tcal.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

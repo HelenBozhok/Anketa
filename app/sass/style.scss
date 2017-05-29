@@ -1,0 +1,352 @@
+@import "variables";
+@import "mixins";
+body {
+    font-family: $primary-font;
+    background-color: $bg-color;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("../img/main.png");
+    background-repeat: repeat-y;
+    background-position: center;
+    @include screen('tablet') {
+        width: 90%;
+    }
+    @include screen('desktop') {
+        width: 70%;
+    }
+}
+
+h1 {
+    @include font(bold,
+    24px,
+    49.83px,
+    $primary-font,
+    $h1-color);
+    @include padding;
+}
+
+p {
+    @include font(normal,
+    15px,
+    23px,
+    $primary-font,
+    $p-color);
+    @include padding;
+    margin-top: -22px;
+}
+
+.header {
+    @include clearfix();
+    &__logo {
+        float: left;
+        margin-left: percentage(270/1305);
+        margin-top: percentage(80/1900);
+    }
+    &__stamp {
+        @media (max-width: 1023px) {
+            max-height: 0;
+            float: none;
+            overflow: hidden;
+        }
+        @media (min-width: 1024px) {
+            float: right;
+            margin-right: percentage(209/1300);
+            margin-top: percentage(59/1900);
+        }
+    }
+}
+
+.container-inner {
+    margin: 0 auto;
+    width: 100%;
+    @include screen('tablet') {
+        width: 90%;
+    }
+    @include screen('desktop') {
+        width: 59%;
+    }
+}
+
+.title {
+    margin-left: percentage(260/790);
+    margin-top: -5px;
+    margin-bottom: percentage(135/1900);
+}
+
+.about {
+    &__list {
+        @include padding();
+        
+    }
+    &__item {
+        display: flex;
+        &-label {
+            @include font(bold,
+            22.43px,
+            49.83px,
+            $primary-font,
+            $h1-color);
+            justify-content: flex-start;
+            margin-right: 15px;
+        }
+        &-input {
+            flex-grow: 1;
+            background: none;
+            @include border-bottom;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            @include font(normal,
+            20px,
+            25px,
+            $secondary-font,
+            #231f20);
+            @media (min-width: 1024px) {
+                @include font(normal, 30px, 36px, $secondary-font, #231f20);
+            }
+        }
+    }
+}
+
+.skills {
+    margin-top: 40px;
+    margin-bottom: 37px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include padding();
+        list-style: none;
+        max-height: 400px;
+        @include font(bold,
+        21px,
+        19px,
+        $primary-font,
+        $list-color);
+        @media (min-width: 1024px) {
+            max-height: 270px;
+        }
+    }
+    &__item {
+        width: 50%;
+        @media (min-width: 1024px) {
+            width: 33%;
+        }
+        padding-bottom: 10px;
+        &-input[type="checkbox"] {
+            position: absolute;
+            left: -9999px;
+            &+label {
+                position: relative;
+                display: block;
+                @include padding(6px,
+                10px,
+                1px,
+                ($checkbox-width+7));
+                cursor: pointer;
+                &:before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 70%;
+                    margin: (-$checkbox-width) 0 0;
+                    width: $checkbox-width;
+                    height: 28px;
+                    background-image: url(../img/sprite/checkbox.png);
+                    background-repeat: no-repeat;
+                }
+            }
+            &:disabled {
+                &+label {
+                    cursor: not-allowed;
+                    &:before {
+                        background-position: (-$checkbox-width*2) 0;
+                    }
+                }
+                &:checked+label {
+                    &:before {
+                        background-position: (-$checkbox-width*3) 0;
+                    }
+                }
+            }
+            &:checked+label {
+                &:before {
+                    background-position: -$checkbox-width*1.4 0;
+                }
+            }
+        }
+    }
+}
+
+.js-skill {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    margin: 27px 0 0 1px;
+    padding-top: 20px;
+    background: url(../img/sprite/js-line.png) no-repeat;
+}
+
+.slider-triangle {
+    position: absolute;
+    top: -12px;
+    left: 142px;
+    width: 17px;
+    height: 17px;
+    background: url(../img/triangle.png) no-repeat;
+}
+
+.slider__item {
+    position: absolute;
+    top: 33px;
+    width: 170px;
+    @include font (bold,
+    13px,
+    19px,
+    $primary-font,
+    $list-color);
+    cursor: pointer;
+    &:nth-child(2) {
+        top: 35px;
+    }
+    &:nth-child(3) {
+        left: 147px;
+    }
+    &:nth-child(4) {
+        left: 374px;
+    }
+    &:last-child {
+        left: 632px;
+        top: 40px;
+    }
+}
+
+.essay {
+    width: 100%;
+    margin-top: -5px;
+    margin-bottom: 27px;
+    textarea {
+        width: 100%;
+        margin-top: 30px;
+        @include font(normal,
+        30px,
+        60px,
+        $secondary-font,
+        #231f20);
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: flex-start;
+        background-image: url(../img/border.png);
+        background-repeat: repeat-y;
+        background-position: bottom;
+        overflow: hidden;
+        background-size: 100% 55px;
+    }
+}
+
+.plans {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @include padding ();
+        list-style: none;
+        @include font(bold,
+        20px,
+        0px,
+        $primary-font,
+        $list-color);
+    }
+    &__item {
+        flex-direction: column;
+        min-height: 50px;
+        padding-right: 12px;
+        @media(min-width: 1024px) {
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+        &-input[type="radio"] {
+            position: absolute;
+            left: -9999px;
+            &+label {
+                position: relative;
+                display: block;
+                @include padding(6px,
+                6px,
+                6px,
+                ($radio-width+7));
+                cursor: pointer;
+                &:before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    margin: (-$radio-width/2) 0 0;
+                    width: $radio-width;
+                    height: 28px;
+                    background-image: url(../img/sprite/radio.png);
+                    background-repeat: no-repeat;
+                }
+            }
+            &:disabled {
+                &+label {
+                    cursor: not-allowed;
+                    &:before {
+                        background-position: (-$radio-width*2) 0;
+                    }
+                }
+                &:checked+label {
+                    &:before {
+                        background-position: (-$radio-width*3) 0;
+                    }
+                }
+            }
+            &:checked+label {
+                &:before {
+                    background-position: -$radio-width*1.15 0;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    min-height: 150px;
+    margin-top: 47px;
+    flex: 0 0 auto;
+}
+
+.date {
+    display: flex;
+    align-items: flex-end;
+    &__label {
+        @include font(bold,
+        22.43px,
+        49.83px,
+        $primary-font,
+        $h1-color);
+        margin-right: 15px;
+    }
+    .tcal {
+        width: 205px;
+        background: none;
+        @include border-bottom;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        @include font(normal,
+        30px,
+        36px,
+        $secondary-font,
+        #231f20);
+    }
+}
