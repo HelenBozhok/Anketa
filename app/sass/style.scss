@@ -79,7 +79,6 @@ p {
 .about {
     &__list {
         @include padding();
-        
     }
     &__item {
         display: flex;
@@ -97,7 +96,6 @@ p {
             background: none;
             @include border-bottom;
             margin-bottom: 20px;
-            padding-left: 15px;
             @include font(normal,
             20px,
             25px,
@@ -246,11 +244,11 @@ p {
         border: none;
         display: flex;
         justify-content: flex-start;
-        background-image: url(../img/border.png);
+        background-image: url(../img/bg_text-area.png);
         background-repeat: repeat-y;
         background-position: bottom;
         overflow: hidden;
-        background-size: 100% 55px;
+        background-size: contain;
     }
 }
 
@@ -341,7 +339,6 @@ p {
         width: 205px;
         background: none;
         @include border-bottom;
-        padding-left: 10px;
         margin-bottom: 15px;
         @include font(normal,
         30px,

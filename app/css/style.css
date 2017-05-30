@@ -98,16 +98,16 @@ p {
     flex-grow: 1;
     background: none;
     border-style: solid;
-    -moz-border-image: url(../images/border.png) repeat;
-    -webkit-border-image: url(../images/border.png) repeat;
-    -o-border-image: url(../images/border.png) repeat;
-    border-image: url(../images/border.png) repeat;
+    -moz-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    -webkit-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    -o-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    border-image: url(../img/border.png) 0 5 3 repeat repeat;
     border-top: none;
     border-left: none;
     border-right: none;
+    padding-left: 15px;
     padding-bottom: -5px;
     margin-bottom: 20px;
-    padding-left: 15px;
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
@@ -235,11 +235,11 @@ p {
     border: none;
     display: flex;
     justify-content: flex-start;
-    background-image: url(../img/border.png);
+    background-image: url(../img/bg_text-area.png);
     background-repeat: repeat-y;
     background-position: bottom;
     overflow: hidden;
-    background-size: 100% 55px; }
+    background-size: contain; }
 
 .plans__list {
   display: flex;
@@ -313,15 +313,15 @@ p {
     width: 205px;
     background: none;
     border-style: solid;
-    -moz-border-image: url(../images/border.png) repeat;
-    -webkit-border-image: url(../images/border.png) repeat;
-    -o-border-image: url(../images/border.png) repeat;
-    border-image: url(../images/border.png) repeat;
+    -moz-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    -webkit-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    -o-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    border-image: url(../img/border.png) 0 5 3 repeat repeat;
     border-top: none;
     border-left: none;
     border-right: none;
+    padding-left: 15px;
     padding-bottom: -5px;
-    padding-left: 10px;
     margin-bottom: 15px;
     font-weight: normal;
     font-size: 30px;

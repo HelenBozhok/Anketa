@@ -48,13 +48,14 @@
 }
 @mixin border-bottom{
     border-style: solid;
-    -moz-border-image: url(../images/border.png) repeat;
-    -webkit-border-image: url(../images/border.png) repeat;
-    -o-border-image: url(../images/border.png) repeat;
-    border-image: url(../images/border.png) repeat;
+    -moz-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    -webkit-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    -o-border-image: url(../img/border.png) 0 5 3 repeat repeat;
+    border-image: url(../img/border.png) 0 5 3 repeat repeat;
     border-top: none;
     border-left: none;
     border-right: none;
+    padding-left: 15px;
     padding-bottom: -5px;
 }
 
